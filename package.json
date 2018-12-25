@@ -1,12 +1,12 @@
 {
-  "name": "web-office",
+  "name": "monitor",
   "version": "0.1.0",
   "private": true,
   "main": "./main.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack -w --hide-modules",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "start": "electron . --inspect=5858"
+    "electron": "electron .",
+    "watch": "cross-env NODE_ENV=development webpack -w --hide-modules",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -24,8 +24,11 @@
     "clean-webpack-plugin": "^1.0.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
-    "electron": "^3.0.7",
+    "devtron": "^1.4.0",
+    "electron": "^3.0.13",
+    "electron-reload": "^1.4.0",
     "file-loader": "^1.1.4",
+    "prettier": "^1.15.3",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
