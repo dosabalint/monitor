@@ -1,15 +1,20 @@
 <template>
-    <div>
-        Dashboard 23
-    </div>
+  <div>
+    Dashboard 233
+    <v-btn color="success">Success</v-btn>
+    <pre>{{ serviceList }}</pre>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Dashboard"
-    }
+import { mapState } from "vuex";
+
+export default {
+  name: "Dashboard",
+  computed: {
+    ...mapState(["serviceList"])
+  }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

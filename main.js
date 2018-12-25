@@ -12,6 +12,14 @@ function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow();
 
+  let installExtension = require("electron-devtools-installer");
+  installExtension
+    .default(installExtension.VUEJS_DEVTOOLS)
+    .then(() => {})
+    .catch(err => {
+      console.log("Unable to install `vue-devtools`: \n", err);
+    });
+
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");
 
